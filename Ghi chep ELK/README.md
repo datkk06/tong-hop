@@ -1,1 +1,1 @@
-# Ghi chép về Elasticsearch
+# Ghi chép về ELK stack.
