@@ -95,13 +95,41 @@ systemctl daemon-reload
 systemctl start kibana
 systemctl enable kibana
 
+########### Logstash Config ##############
+
+echocolor "Logstash config"
+
+sleep 3
+
+touch /etc/logstash/conf.d/02-logstash.conf
+
+cat > /etc/logstash/conf.d/02-logstash.conf << EOF
+input {
+beats {
+    port => 5044
+    ssl => false
+}
+}
+
+output {
+    elasticsearch {
+    hosts => ["localhost:9200"]
+    sniffing => true
+    index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+    }
+}
+EOF
+
+systemctl stop logstash
+systemctl start logstash
+
 ########### Finish ##############
 
 echocolor "Finish"
 
 sleep 3
 
-touch ~/opt/elk-finish.txt
+touch /opt/elk-finish.txt
 
 echo "Truy cap vao IP-SERVER:5601 de kiem tra" >> /opt/elk-finish.txt
 echo "Script by datpt" >> /opt/elk-finish.txt
