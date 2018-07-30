@@ -10,7 +10,7 @@
 - Config và cài đặt :
 
     ```sh
-    cd /tong-hop/Ghi\ chep\ ELK/script/1.\ Cai\ dat\ ELK\ tren\ CentOS\ 7/
+    cd tong-hop/Ghi\ chep\ ELK/script/1.\ Cai\ dat\ ELK\ tren\ CentOS\ 7/
     chmod +x elk.sh
     ./elk.sh
     ```

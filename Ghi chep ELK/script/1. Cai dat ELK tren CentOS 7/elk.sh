@@ -39,7 +39,7 @@ yum install elasticsearch -y
 echo "network.host: $CLIENT_ELASTIC" >> /etc/elasticsearch/elasticsearch.yml
 
 systemctl restart elasticsearch
-systemctl enabled elasticsearch
+systemctl enable elasticsearch
 
 echocolor "Test Elastic"
 
