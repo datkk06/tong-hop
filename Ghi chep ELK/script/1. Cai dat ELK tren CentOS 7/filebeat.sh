@@ -47,7 +47,7 @@ filebeat:
   registry_file: /var/lib/filebeat/registry
 output:
   logstash:
-    hosts: ["localhost:5044"]
+    hosts: ["192.168.30.164:5044"]
     worker: 2
     bulk_max_size: 2048
 logging:
@@ -63,8 +63,8 @@ logging:
 EOF
 
 
-sed -i 's/document_type: type/document_type: $HOST_FILEBEAT/'g /etc/filebeat/filebeat.yml
-sed -i 's/hosts: ["localhost:5044"]/hosts: ["$HOST_ELK_SERVER:5044"]/'g /etc/filebeat/filebeat.yml
+#sed -i 's/document_type: type/document_type: $HOST_FILEBEAT/'g /etc/filebeat/filebeat.yml
+#sed -i 's/hosts: ["localhost:5044"]/hosts: ["$HOST_ELK_SERVER:5044"]/'g /etc/filebeat/filebeat.yml
 
 systemctl stop filebeat
 rm -rf /var/lib/filebeat/registry
