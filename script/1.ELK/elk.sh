@@ -141,7 +141,5 @@ sleep 3
 
 touch /opt/elk-finish.txt
 
-echo "Truy cap vao IP-SERVER:5601 de kiem tra" >> /opt/elk-finish.txt
-echo "Script by datpt" >> /opt/elk-finish.txt
-
-cat /opt/elk-finish.txt
+echo "Truy cap vao IP-SERVER:5601 de kiem tra"
+sleep 3

@@ -86,8 +86,9 @@ echocolor "Finish"
 
 sleep 3
 
-echo "Truy cap vao $HOST_ELK_SERVER:5601" >> /opt/finishfilebeat.txt
-echo "Tao index pattern la filebeat-*" >> /opt/finishfilebeat.txt
-echo "Kiem tra ket qua tai Discovery" >> /opt/finishfilebeat.txt
-
-cat /opt/finishfilebeat.txt
+echocolor "Truy cap vao $HOST_ELK_SERVER:5601"
+sleep 3
+echocolor "Tao index pattern la filebeat-*"
+sleep 3
+echocolor "Kiem tra ket qua tai Discovery"
+sleep 3
