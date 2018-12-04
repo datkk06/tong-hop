@@ -1,4 +1,4 @@
-# Tạo bot slack nhận cảnh báo từ portal.
+# Tạo bot slack nhận cảnh báo từ portal. (Cần tên channel và token của bot)
 
 - Đầu tiên vào link sau để vào màn hình tạo app:
 	```sh
@@ -31,7 +31,7 @@
 
 - Sau đó tạo thêm 1 channel để bot gửi thông báo vào trong đó.
 
-# Tạo bot telegram nhận cảnh báo từ portal.
+# Tạo bot telegram nhận cảnh báo từ portal. (Cần token và groupID)
 
 - Đầu tiên chat với @BotFather để lấy token :
 
